@@ -1,0 +1,24 @@
+{
+    "name": "k-sass-core",
+    "description": "k-sass-core: An SASS Lib",
+    "version": "3.0.0",
+    "main": "",
+    "authors": [
+        "Bao Nguyen"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "k-sass-core"
+    ],
+    "homepage": "https://github.com/baonguyenyam/k-sass-core",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap": "^v4.0.0-alpha.2"
+    }
+}

@@ -1,0 +1,422 @@
+.home-title
+	+fs(18rem)
+	text-transform: uppercase
+	margin-bottom: 15px
+	color: $main
+	span
+		text-transform: none
+		margin-left: 5px
+		opacity: 0.5
+.sidebar-title
+	+fs(24rem)
+	text-transform: uppercase
+	margin-bottom: 15px
+.small-title
+	border-bottom: 1px solid darken($white,5%)
+	span
+		display: inline-block
+		+fs(14rem)
+		font-weight: 500
+		text-transform: uppercase
+		border-bottom: 2px solid $green
+		margin-bottom: -1px
+		padding: 10px 0
+
+.home-flex
+	background: url(../img/home/bg.jpg) center repeat
+// sidebar menu
+.home-menu
+	width: 245px
+	background: $white
+	border: 1px solid #ccc
+	+pos(rel,null)
+	+media-breakpoint-down(lg)
+		display: none
+	ul.menu-link
+		> li
+			+pos(rel,null)
+			padding-bottom: 1px
+			> a
+				display: block
+				+fs(13rem)
+				line-height: 18px
+				padding: 7px 15px
+				+transition(all,0s)
+				+pos(rel,null)
+				&:before
+					content: ''
+					display: block
+					+pos(abs, null 15px -1px 15px)
+					height: 1px
+					background: #EFEFEF
+				span
+					+fs(11rem)
+					color: darken($white,40%)
+			&:last-child
+				> a
+					&:before
+						display: none
+			&.has-sub
+				> a
+					&:after
+						content: '\f105'
+						+pos(abs, 7px 15px null null)
+						z-index: 1
+						opacity: 0.3
+						z-index: 200
+				.mega-sub
+					+pos(abs, -1px null null 100%)
+					z-index: 100
+					// width: calc(1200px - 245px)
+					width: 500px
+					height: 375px
+					background: $white
+					padding: 20px 30px
+					box-shadow: 0px 1px 4px color-rgba($black,0.25)
+					display: none
+					.title
+						display: block
+						+fs(14rem)
+						color: $red
+						text-transform: uppercase
+						margin-bottom: 10px
+					.mega-row
+						+flexbox
+						flex-wrap: wrap
+						margin: 0px -10px
+						+media-breakpoint-down(lg)
+							margin: 0
+						.mega-col
+							width: 100%
+							// padding: 0px 10px
+							ul
+								+flexbox
+								flex-wrap: wrap
+								li
+									width: 50%
+									padding: 0px 10px
+									margin-bottom: 5px
+									+media-breakpoint-down(lg)
+										width: 100%
+									a
+										+fs(13rem)
+										line-height: 1.3
+										color: $main
+										span
+											+fs(11rem)
+											color: darken($white,40%)
+									&:hover
+										a
+											color: $orange
+			&:hover
+				> a
+					color: $white
+					background: $red
+					+pos(rel,null)
+					z-index: 200
+					span
+						color: $white
+					&:before
+						display: none
+					&:after
+						content: ''
+						display: block
+						border-top: 16px solid transparent
+						border-bottom: 17px solid transparent
+						border-left: 10px solid $red
+						+pos(abs, 0 unset null 100%)
+						opacity: 1
+						z-index: 200
+				.mega-sub
+					display: block
+
+// home banner
+.home-banner-wrap
+	width: calc(100% - 245px)
+	+flexbox
+	flex-wrap: wrap
+	align-items: flex-start
+	align-content: flex-start
+	+media-breakpoint-down(lg)
+		width: 100%
+		padding-top: 15px
+	.home-banner
+		width: 100%
+		max-width: 715px
+		+media-breakpoint-down(lg)
+			max-width: 100%
+		.slick-prev, .slick-next
+			+pos(abs,50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			+media-breakpoint-down(sm)
+				display: none
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+fs(18rem)
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				background: $white
+				box-shadow: 1px 1px 3px color-rgba($black,0.2)
+			&:hover
+				&:before
+					background: $orange
+					color: $white
+		.slick-prev
+			left: 10px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 10px
+			&:before
+				content: '\f105'
+		.slick-dots
+			+pos(abs, null 0 10px 0)
+			text-align: center
+			li
+				display: inline-block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: $white
+				box-shadow: 1px 1px 1px color-rgba($black,0.16)
+				+ li
+					margin-left: 5px
+				&.slick-active
+					background: $orange
+				button
+					display: none
+		.item
+			vertical-align: top
+			img
+				width: 100%
+	.banner-ads
+		width: calc(100% - 715px)
+		+media-breakpoint-down(lg)
+			width: 100%
+			+flexbox
+		+media-breakpoint-down(sm)
+			display: block
+			width: auto
+			white-space: nowrap
+			overflow: auto
+			margin: 0px -15px
+			padding: 0px 15px
+			margin-top: 15px
+		.item
+			+media-breakpoint-down(lg)
+				width: 33.33%
+			+media-breakpoint-down(sm)
+				display: inline-block
+				vertical-align: top
+				width: 180px
+				+ .item
+					margin-left: 10px
+		.banner-ad
+			display: block
+			height: 33.33%
+			+media-breakpoint-down(lg)
+				height: auto
+			img
+				width: 100%
+				object-fit: cover
+
+// hot keyword
+.hot-keyword
+	width: 100%
+	margin: 20px 0
+	.keyword-slick
+		margin: -10px 0
+		.slick-prev, .slick-next
+			+pos(abs,50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			color: darken($white,60%)
+			&:before
+				content: ''
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+fs(16rem)
+				width: 20px
+				height: 20px
+				+bor-rad(50px)
+				background: $white
+				box-shadow: 1px 1px 3px color-rgba($black,0.2)
+			&:hover
+				&:before
+					color: $white
+					background: $orange
+			&.slick-disabled
+				opacity: 0
+		.slick-prev
+			left: 5px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 5px
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -5px
+		.slick-track
+			overflow: visible
+		.item
+			padding: 10px 5px
+	.keyword
+		height: 50px
+		border: 1px solid darken($white,15%)
+		+bor-rad(4px)
+		background: $white
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+fs(13rem)
+		color: darken($white,50%)
+		line-height: 1.2
+		text-align: center
+		padding: 0px 5px
+		&:hover
+			color: $orange
+			border-color: $orange
+			box-shadow: 0px 0px 7px color-rgba($orange,0.5)
+
+// home ads
+.home-ads
+	+flexbox
+	flex-wrap: wrap
+	margin: 0px -10px
+	margin-top: 20px
+	+media-breakpoint-down(sm)
+		display: block
+		margin: 0px -15px
+		padding: 0px 15px
+		margin-top: 15px
+		white-space: nowrap
+		overflow: auto
+	.item
+		padding: 0px 10px
+		width: 25%
+		+media-breakpoint-down(sm)
+			display: inline-block
+			vertical-align: top
+			width: 180px
+			padding: 0
+			+ .item
+				margin-left: 10px
+		.ads-banner
+			display: block
+			img
+				width: 100%
+
+// home section
+.home-section
+	+pos(rel,null)
+	background: $white
+	padding: 20px 0
+	&.s2
+		background: url(../img/home/bg.jpg) center repeat
+	.ModuleContent
+		+pos(rel,null)
+// home product
+.home-product
+	+pos(rel,null)
+.home-section
+	&.s2
+		.product-slick
+			background: $white
+			&.s2
+				.product-item
+					border: none
+
+// home news
+.home-book
+	background: $white
+	padding: 20px 0
+	.home-book-wrap
+		+pos(rel,null)
+		padding-bottom: 20px
+		border-bottom: 1px solid darken($white,10%)
+	.news-slick
+		+flexbox
+		margin: 0px -15px
+		+media-breakpoint-down(sm)
+			display: block
+			white-space: nowrap
+			overflow: auto
+			margin: 0px -15px
+			padding: 0px 15px
+		.item
+			padding: 0px 15px
+			+media-breakpoint-down(sm)
+				padding: 0
+				width: 180px
+				display: inline-block
+				vertical-align: top
+				width: 180px
+				+ .item
+					margin-left: 10px
+	.news-item
+		.img
+			display: block
+		.caption
+			padding-top: 10px
+		.name
+			a
+				display: block
+				+fs(13rem)
+				line-height: 1.3
+				+textover(3)
+				margin-bottom: 5px
+				&:hover
+					color: $orange
+		time
+			+fs(11rem)
+			color: darken($white,50%)
+			display: block
+			margin-bottom: 5px
+		.link
+			+fs(13rem)
+			color: $orange
+	.partner-slick
+		padding: 30px 0
+		+flexbox
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(sm)
+			display: block
+			padding: 10px 15px
+			margin: 0px -15px
+			overflow: auto
+			white-space: nowrap
+		.item
+			width: calc(100% / 8)
+			+media-breakpoint-down(sm)
+				width: 70px
+				display: inline-block
+				+ .item
+					margin-left: 10px
+			.partner, .img
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				height: 70px
+				filter: grayscale(100%)
+				opacity: 0.7
+				img
+					max-width: 100%
+					max-height: 100%
+				&:hover
+					filter: grayscale(0%)
+					opacity: 1

@@ -1,0 +1,152 @@
+.webbook-detail
+	padding: 20px
+	+media-breakpoint-down(sm)
+		padding: 15px
+	.webbook-info
+		margin-bottom: 15px
+	.webbook-name
+		+fs(24rem)
+		line-height: 1.2
+		font-weight: 700
+		+media-breakpoint-down(sm)
+			+fs(20rem)
+	time
+		display: inline-block
+		vertical-align: middle
+		+fs(12rem)
+		color: color-rgba($black,0.5)
+	.category
+		display: inline-block
+		vertical-align: middle
+		+fs(12rem)
+		line-height: 1
+		color: $white
+		background: $red
+		padding: 3px 5px
+		margin-left: 10px
+		text-transform: capitalize
+	.content
+		margin-bottom: 20px
+		.content-product
+			text-align: center
+			.btn-buy
+				display: inline-block
+				min-width: 225px
+				text-align: center
+				line-height: 40px
+				color: $white
+				background: linear-gradient($orange,$orangedark)
+				+bor-rad(4px)
+				+fs(14rem)
+				font-weight: 700
+				&:hover
+					box-shadow: 0px 10px 20px -10px $orange
+	.webbook-product
+		padding: 20px
+		border: 1px solid darken($white,10%)
+		+media-breakpoint-down(sm)
+			padding: 15px 0
+			border: none
+			border-top: 1px solid darken($white,10%)
+		+flexbox
+		.img
+			width: 130px
+			+media-breakpoint-down(sm)
+				width: 80px
+		.caption
+			width: calc(100% - 130px)
+			padding-left: 20px
+			+media-breakpoint-down(sm)
+				width: calc(100% - 80px)
+				padding-left: 10px
+			.name
+				+fs(24rem)
+				color: $main
+				+textover(2)
+				+media-breakpoint-down(sm)
+					+fs(16rem)
+			.rating
+				+flexbox
+				align-items: center
+				align-content: center
+				+fs(14rem)
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+				ul
+					+flexbox
+					align-items: center
+					align-content: center
+					margin-right: 10px
+					li
+						color: darken($white,20%)
+						+ li
+							margin-left: 3px
+						&.active
+							.fa
+								color: $amber
+			.des
+				margin-bottom: 15px
+				ul
+					li
+						+flexbox
+						align-items: flex-end
+						align-content: flex-end
+						+fs(13rem)
+						height: 1.7rem
+						span
+							margin-left: 10px
+					.price-old
+						color: darken($white,40%)
+					.price-new
+						+fs(28rem)
+						font-weight: 700
+						color: #FF0000
+						line-height: 1
+						+media-breakpoint-down(sm)
+							+fs(16rem)
+			.btn-buy
+				display: inline-block
+				min-width: 225px
+				text-align: center
+				line-height: 40px
+				color: $white
+				background: linear-gradient($orange,$orangedark)
+				+bor-rad(4px)
+				+fs(14rem)
+				font-weight: 700
+				&:hover
+					box-shadow: 0px 10px 20px -10px $orangedark
+.webbook-other
+	padding: 20px
+	+media-breakpoint-down(sm)
+		padding: 15px
+		border-top: 1px solid darken($white,5%)
+	.other-list
+	.other-item
+		display: block
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+		.img
+			margin-bottom: 15px
+		.caption
+		.name
+			+fs(16rem)
+			font-weight: 700
+			line-height: 1.3
+			a
+				+textover(2)
+		time
+			display: inline-block
+			vertical-align: middle
+			+fs(11rem)
+			color: color-rgba($black,0.5)
+		.category
+			display: inline-block
+			vertical-align: middle
+			+fs(11rem)
+			line-height: 1
+			color: $white
+			background: $red
+			padding: 3px 5px
+			margin-left: 10px
+			text-transform: capitalize

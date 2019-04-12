@@ -1,0 +1,24 @@
+.suggestsearch
+	max-height: 300px
+	overflow: auto
+	ul
+		li
+			a
+				display: block
+				padding: 10px
+				padding-left: 70px
+				+pos(rel,null)
+				img
+					+pos(abs, 10px null null 10px)
+				h3
+					+fs(14rem)
+					font-weight: 700
+					color: $main
+				.price
+					+fs(13rem)
+					color: red
+					margin-right: 20px
+				.price_original
+					+fs(13rem)
+					color: darken($white,40%)
+					text-decoration: line-through

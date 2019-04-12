@@ -1,0 +1,94 @@
+.product-item
+	display: block
+	margin-bottom: 20px
+	padding: 20px 10px 10px
+	color: $main
+	background: $white
+	+transition(all,0.3s)
+	+media-breakpoint-down(sm)
+		+pos(rel,null)
+		margin-bottom: 10px
+	.img
+		height: 200px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		margin-bottom: 10px
+		+media-breakpoint-down(lg)
+			height: 180px
+		+media-breakpoint-down(sm)
+			height: 150px
+		img
+			width: auto
+			height: 100%
+			max-height: 100%
+			+transition(all,0.5s)
+	.caption
+		.name
+			+fs(14rem)
+			+textover(2)
+		.author
+			+fs(11rem)
+			color: darken($white,40%)
+			margin-bottom: 10px
+		.price
+			+flexbox
+			+pos(rel,null)
+			align-items: flex-end
+			align-content: flex-end
+			margin-bottom: 10px
+			+media-breakpoint-down(sm)
+				+pos(static,null)
+			.promotion
+				+pos(abs, 0 0 null null)
+				+fs(11rem)
+				font-weight: 700
+				background: $orange
+				color: $white
+				line-height: 16px
+				padding: 0px 3px
+				+bor-rad(0 4px 4px 0)
+				+media-breakpoint-down(sm)
+					top: 10px
+					right: 10px
+				&:before
+					content: ''
+					display: block
+					border: 8px solid transparent
+					border-left: none
+					border-right-color: $orange
+					+pos(abs, 0 null null -8px)
+			.new
+				+fs(14rem)
+				color: #f00
+				font-weight: 500
+				line-height: 1
+				margin-right: 10px
+			.old
+				+fs(11rem)
+				color: darken($white,40%)
+				line-height: 1
+		.rating
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(11rem)
+			color: darken($white,40%)
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				margin-right: 10px
+				li
+					color: darken($white,20%)
+					+ li
+						margin-left: 3px
+					&.active
+						.fa
+							color: $amber
+	&:hover
+		color: $orange
+		.img
+			img
+				+transform(translateY(-10px))

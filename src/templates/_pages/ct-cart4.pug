@@ -1,0 +1,126 @@
+.container
+	section.cart-page
+		.cart-progress
+			ul
+				li.active
+					.number 1
+					label Đăng nhập
+				li.active
+					.number 2
+					label Địa chỉ giao hàng
+				li
+					.number 3
+					label Than toán / Đặt mua
+		.row
+			.col-12.col-lg-9
+				.cart-step.s4
+					.small-title
+						span THANH TOÁN / ĐẶT MUA
+					.cart-login
+						.form-wrap
+							.form-title CHỌN GÓI GIAO HÀNG
+							.radio 
+								input#rd1(type="radio", name="rd")
+								label(for="rd1") Chuyển thường đảm bảo (1-3 ngày ở HCM; 3-7 ngày làm việc ở Tỉnh, trừ cuối tuần)
+						.form-hr
+						.form-wrap
+							.form-title CHỌN PHƯƠNG THỨC THANH TOÁN
+							.radio.mb-2
+								input#rd2(type="radio", name="rd2")
+								label(for="rd2") 
+									strong Thanh toán bằng Internet banking hoặc thẻ ATM - không COD
+									br
+									|- Quý khách 
+									strong chỉ chuyển khoản khi được xác nhận có đủ sách qua điện thoại 
+									|từ Sách Khai Tâm. 
+									br
+									|- Thời gian chuyển khoản là trong tối đa 
+									strong 2 ngày 
+									|từ khi có xác nhận đủ sách. 
+									br
+									|- Nội dung chuyển khoản cần ghi: thanh toán đơn hàng 
+									strong mã xxxxxxxxx
+									|; hoặc 
+									strong số điện thoại 
+									|khi đặt sách
+									br
+									|- Xem thông tin chuyển khoản của Sách Khai Tâm 
+									a.text-green(href="#!") tại đây
+							.radio 
+								input#rd3(type="radio", name="rd2")
+								label(for="rd3") 
+									strong Thanh toán bằng tiền mặt khi nhận hàng
+									br
+									|Đối với đơn hàng ngoài TP. Hồ Chí Minh có phí Bưu Điện phụ thu
+						.form-hr
+						.form-title.text-center THÔNG TIN XUẤT HÓA ĐƠN (CHỈ XUẤT VAT CHO ĐƠN HÀNG TỪ 500K, HOẶC CỘNG DỒN TỪ 500K)
+						.form-wrap
+							.form-group
+								label Tên công ty:
+								input(type="text" placeholder="")
+							.form-group
+								label ĐỊa chỉ:
+								input(type="text" placeholder="")
+							.form-group
+								label Mã số thuế:
+								input(type="text" placeholder="")
+							.form-title Ghi chú (nếu có)
+							.form-group
+								label Địa chỉ:
+								input(type="text" placeholder="")
+							.btn-wrap
+								a.btn-login(href="#!") Đặt mua
+							.form-des (Vui lòng kiểm tra lại đơn hàng trước khi Đặt Mua)
+			.col-12.col-lg-3
+				.cart-step.s2
+					.cart-title-info Địa chỉ giao hàng
+						a.btn-edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					.cart-address
+						ul
+							li 
+								strong Tên người nhận: 
+								|Võ Văn Minh
+							li 
+								strong Địa chỉ: 
+								|8 Nguyễn Phi Khanh, P. Tân Định Quận 1 TP Hồ Chí Minh 
+							li 
+								strong Điện thoại: 
+								|0905234706
+							li 
+								strong Email: 
+								|minhtruc@sachkhaitam.com
+				.cart-step.s2
+					.cart-title-info Thông tin đơn hàng
+						a.btn-edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					.cart-product
+						.title Bạn có 1 sản phẩm trong giỏ hàng
+						.item
+							a.img(href="#!")
+								img(src="img/pr2.png", alt="")
+							.caption
+								a.name(href="#!") Đắc Nhân Tâm - Bí quyết để thành công
+								.amount Số lượng: 1
+							.price 57.800đ
+					.cart-overview
+						ul
+							li
+								label(for="") 
+									strong Tổng giỏ hàng
+								.value 57.800đ
+							li
+								label(for="") Phí vận chuyển
+								.value 0đ
+							li
+								label(for="") Phí Bưu điện phụ thu 
+								.value Chưa có
+							li
+								label(for="") Dịch vụ cộng thêm
+								.value Chưa có
+					.cart-total
+						label Thành tiền
+						.value
+							strong 57.800đ
+							span (Đã bao gồm VAT)
+					.cart-des Bạn sẽ được tặng 3 
+						span.text-green Búp sen 
+						|sau khi hoàn tất thanh toán đơn hàng này

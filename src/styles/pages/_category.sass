@@ -1,0 +1,204 @@
+.page-banner
+	// margin-top: 10px
+	margin-bottom: 10px
+	.banner
+		.slick-dots
+			display: none !important
+		.slick-prev, .slick-next
+			+pos(abs,50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			+media-breakpoint-down(sm)
+				display: none !important
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+fs(24rem)
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				background: $white
+				box-shadow: 1px 1px 3px color-rgba($black,0.2)
+			&:hover
+				&:before
+					background: $orange
+					color: $white
+		.slick-prev
+			left: 10px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 10px
+			&:before
+				content: '\f105'
+		.item
+			display: block !important
+.category-filter
+	margin-bottom: 10px
+	.category-list
+		margin: 0px -5px
+		+flexbox
+		flex-wrap: wrap
+		+media-breakpoint-down(sm)
+			display: block
+			white-space: nowrap
+			overflow: auto
+			margin: 0px -20px
+			padding: 0px 15px
+		li
+			padding: 5px
+			width: calc(100% / 10)
+			margin-bottom: 10px
+			+media-breakpoint-down(sm)
+				display: inline-block
+				vertical-align: top
+				width: 120px
+				white-space: normal
+				// padding: 0
+				// + li
+				// 	margin-left: 10px
+			a
+				display: block
+				border: 1px solid darken($white,15%)
+				+bor-rad(4px)
+				background: $white
+				text-align: center
+				padding: 10px
+				.img
+					margin-bottom: 10px
+					img
+						height: 80px
+				.name
+					+fs(12rem)
+					line-height: 1.2
+					text-align: center
+					+textover(2)
+					min-height: 28px
+				&:hover
+					color: $orange
+					border-color: $orange
+					box-shadow: 0px 0px 7px color-rgba($orange,0.5)
+			&.active
+				a
+					color: $orange
+					border-color: $orange
+					+pos(rel,null)
+					box-shadow: 0px 0px 7px color-rgba($orange,0.5)
+					&:before
+						content: '\f058'
+						font-family: "fontawesome"
+						+pos(abs, 5px 5px null null)
+						+fs(18rem)
+						line-height: 1
+						z-index: 3
+.category-header
+	min-height: 50px
+	background: $white
+	+flexbox
+	flex-wrap: wrap
+	align-items: center
+	align-content: center
+	justify-content: space-between
+	color: darken($white,60%)
+	padding: 10px 20px
+	border-bottom: 1px solid darken($white,5%)
+	+media-breakpoint-down(sm)
+		padding: 10px 15px
+	.amount
+		+fs(13rem)
+		strong
+			color: $main
+	.filter-tag
+		+fs(13rem)
+		flex: 1
+		+media-breakpoint-up(md)
+			display: block
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			padding-right: 20px
+			color: $orange
+		+media-breakpoint-down(sm)
+			+fs(14rem)
+			margin-bottom: 10px
+			margin-top: 5px
+		label
+			padding-right: 10px
+			color: $main
+			+media-breakpoint-down(sm)
+				display: block
+				padding-right: 0
+				width: 100%
+				margin-bottom: 5px
+		a
+			color: $orange
+			line-height: 1
+			+media-breakpoint-down(sm)
+				display: inline-block
+				vertical-align: middle
+				background: lighten($orange,40%)
+				+bor-rad(4px)
+				+fs(13rem)
+				padding: 6px 8px
+				margin-right: 8px
+				margin-bottom: 8px
+			+ a
+				margin-left: 10px
+				// padding-left: 5px
+				// border-left: 1px solid color-rgba($orange,0.5)
+				+media-breakpoint-down(sm)
+					border-left: none
+					margin-left: 0
+					padding-left: 7px
+			&:hover
+				text-decoration: underline
+	.sort
+		+flexbox
+		+media-breakpoint-down(sm)
+			flex-direction: column
+			width: 100%
+		.group
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(sm)
+				width: 100%
+			+ .group
+				margin-left: 15px
+				+media-breakpoint-down(sm)
+					margin-left: 0
+					margin-top: 10px
+			label
+				+fs(13rem)
+				margin-right: 10px
+				+media-breakpoint-down(sm)
+					width: 100px
+			select
+				min-width: 120px
+				+fs(13rem)
+				color: darken($white,60%)
+				border: 1px solid darken($white,10%)
+				+bor-rad(3px)
+				padding: 5px 10px
+				+media-breakpoint-down(sm)
+					min-width: unset
+					flex: 1
+.category-page
+	background: $white
+	margin-bottom: 40px
+	.product-list
+		padding: 20px 20px 0
+		+media-breakpoint-down(sm)
+			padding: 0px
+		.col-custom
+			+media-breakpoint-up(xl)
+				flex: 0 0 20%
+				max-width: 20%
+		.pages, + .pages
+			ul.pagination
+				justify-content: center

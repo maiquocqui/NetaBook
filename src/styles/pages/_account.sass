@@ -1,0 +1,230 @@
+.account-page
+	background: $white
+	max-width: 960px
+	margin: 20px auto
+	padding: 20px
+	+media-breakpoint-down(sm)
+		margin: 0 -15px
+		padding: 15px
+	.nav-tabs2
+		+media-breakpoint-down(sm)
+			margin: 0px -15px
+			padding: 0px 15px
+	.account-info
+		padding: 20px
+		+media-breakpoint-down(sm)
+			padding: 20px 0
+		.module-title
+			+fs(18rem)
+			color: #cccccc
+			margin-left: 170px
+			margin-bottom: 10px
+			+media-breakpoint-down(sm)
+				margin-left: 0
+				+fs(16rem)
+				color: $main
+				font-weight: 500
+	.account-form
+		max-width: 70%
+		+media-breakpoint-down(sm)
+			max-width: 100%
+	.form-group
+		+flexbox
+		margin-bottom: 15px
+		+media-breakpoint-down(sm)
+			flex-wrap: wrap
+		label
+			width: 170px
+			+media-breakpoint-down(sm)
+				width: 100px
+		input, textarea, select
+			flex: 1
+		&.phone
+			input
+				padding-right: 140px
+			.btn-sendcode
+				@extend .button-primary
+				+fs(13rem)
+				text-transform: none
+				font-weight: normal
+				line-height: 37px
+				min-width: unset
+				padding: 0px 20px
+				+pos(abs, 0 0 null null)
+				+media-breakpoint-down(sm)
+					padding: 0px 10px
+					// top: 29px
+		input[type="submit"]
+			@extend .button-primary
+			flex: unset
+			padding: 0 40px
+			border: none
+			width: auto
+			min-width: unset
+	.checkbox
+		label
+			width: 100%
+	.connect-account
+		margin-top: 30px
+		label
+			+fs(14rem)
+			text-transform: uppercase
+			margin-bottom: 15px
+		.connect-list
+			border: 1px solid darken($white,5%)
+			+bor-rad(4px)
+			padding: 10px 0
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(sm)
+				flex-wrap: wrap
+				padding: 0
+			.item
+				width: 50%
+				padding: 0px 10px
+				+flexbox
+				align-items: center
+				align-content: center
+				+media-breakpoint-down(sm)
+					width: 100%
+					padding: 15px
+					+ .item
+						border-top: 1px solid darken($white,5%)
+				&:nth-child(2n)
+					border-left: 1px solid darken($white,5%)
+					+media-breakpoint-down(sm)
+						border-left: none
+				.fab
+					width: 50px
+					height: 50px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					+bor-rad(50px)
+					color: $white
+					+fs(24rem)
+					&.fa-facebook-f
+						background: $facebook
+					&.fa-google-plus-g
+						background: $google
+				.caption
+					padding-left: 15px
+					flex: 1
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: space-between
+					+fs(13rem)
+					a.status
+						color: $orange
+.table-wrap
+	overflow: auto
+	+media-breakpoint-down(sm)
+		margin: 0px -15px
+		// padding: 0px 15px
+.table-order
+	+media-breakpoint-down(sm)
+		min-width: 800px
+		// margin-right: 15px
+		&.table-order2
+			min-width: 500px
+	th
+		+fs(14rem)
+		font-weight: normal
+		padding: 10px 15px
+		background: #DADADA
+	tr
+		+pos(rel,null)
+		&:nth-child(even)
+			background: #F4F4F4
+	td
+		+fs(13rem)
+		padding: 10px 15px
+		.name
+			display: block
+			color: $main
+			&:hover
+				color: $orange
+				text-decoration: underline
+			// &:before 
+			// 	content: ''
+			// 	display: block
+			// 	+pos(abs, 0 null 0 0)
+			// 	right: 0
+.account-order
+	padding: 20px
+	+media-breakpoint-down(sm)
+		padding: 15px 0
+	.order-id
+		+fs(14rem)
+		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+			strong
+				display: block
+	.order-title
+		+fs(14rem)
+		margin-bottom: 5px
+		text-transform: uppercase
+	.detail-col
+		+bor-rad(4px)
+		padding: 15px
+		border: 1px solid darken($white,5%)
+		+fs(13rem)
+		height: calc(100% - 26px - 20px)
+		color: darken($white,50%)
+		margin-bottom: 20px
+		strong
+			color: $main
+	.table-ordered
+		+media-breakpoint-down(sm)
+			min-width: 600px
+		th
+			+fs(14rem)
+			font-weight: normal
+			padding: 10px 15px
+			background: #DADADA
+		td
+			border-bottom: 1px solid darken($white,5%)
+			padding: 10px 15px
+			+fs(13rem)
+			vertical-align: middle
+			.product
+				+flexbox
+				align-items: center
+				align-content: center
+			.img
+				display: block
+				height: 70px
+				width: 70px
+				text-align: center
+				img
+					height: 100%
+	.btn-back
+		+fs(13rem)
+		color: $orange
+		display: block
+		border-top: 1px solid darken($white,5%)
+		padding: 20px 0
+		margin-top: 15px
+		&:hover
+			text-decoration: underline
+.point-manager
+	padding: 20px
+	+media-breakpoint-down(sm)
+		padding: 15px 0
+	.report
+		+fs(14rem)
+		text-transform: uppercase
+		margin-bottom: 20px
+		text-align: center
+		+media-breakpoint-down(sm)
+			text-align: left
+			margin-bottom: 0
+			text-transform: none
+		strong
+			color: $grey
+			+media-breakpoint-down(sm)
+				color: $orange

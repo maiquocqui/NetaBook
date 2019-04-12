@@ -1,0 +1,196 @@
+.journalEditor
+	@extend .form-wrap
+
+.product-comment
+	.medium-title
+		+fs(16rem)
+		margin-bottom: 15px
+		width: 100%
+.product-review
+	+flexbox
+	flex-wrap: wrap
+	max-width: 60%
+	margin: 0 0 10px
+	+media-breakpoint-down(md)
+		max-width: 100%
+	.medium-rating
+		text-align: center
+		width: 200px
+		padding-right: 80px
+		+media-breakpoint-down(sm)
+			width: 100px
+			padding-right: 20px
+		.point
+			+fs(48rem)
+			font-weight: 700
+			color: red
+			line-height: 1
+			margin-bottom: 5px
+			+media-breakpoint-down(sm)
+				+fs(22rem)
+		ul.stars
+			text-align: center
+			margin-bottom: 5px
+			li
+				display: inline-block
+				color: #CCCCCC
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+				+ li
+					margin-left: 5px
+					+media-breakpoint-down(sm)
+						margin-left: 0
+				.fas
+				&.active
+					color: $amber
+		.total-comment
+			+fs(13rem)
+			color: darken($white,50%)
+	.start-overview
+		flex: 1
+		ul
+			li
+				+flexbox
+				align-items: center
+				align-content: center
+				color: darken($white,60%)
+				margin-bottom: 10px
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+					margin-bottom: 0
+				label
+					width: 40px
+					.fas
+						color: darken($white,30%)
+				.progress
+					flex: 1
+					height: 10px
+					+bor-rad(50px)
+					overflow: hidden
+					.progress-bar
+						background: $green
+				.percent
+					width: 40px
+					padding-left: 10px
+	.btn-wrap
+		width: 100%
+		text-align: center
+		padding-left: 200px
+		+media-breakpoint-down(sm)
+			padding-left: 0
+		.btn-comment
+			@extend .button-secondary
+			font-weight: normal
+			margin-top: 10px
+	.comment-form
+		width: 100%
+		margin-top: 10px
+		padding-left: 200px
+		// display: none
+		+media-breakpoint-down(sm)
+			padding-left: 0
+		.module-title
+			font-weight: 500
+		.form-group
+			&.rating
+				+flexbox
+				align-items: center
+				align-content: center
+				label
+					width: auto
+				.rating-input
+					ul
+						+flexbox
+						align-items: center
+						align-content: center
+						margin-left: 10px
+						li
+							+ li
+								margin-left: 5px
+							a
+								color: darken($white,30%)
+								&:hover
+									color: $amber
+								&.active
+									color: $amber
+							&:hover
+								a
+									color: $amber
+							&.active
+								a
+									color: $amber
+		.btnShare ,input[type="submit"]
+			@extend .button-secondary
+			width: auto
+			padding: 0
+			background: inherit
+.comment-list
+	border-top: 1px solid darken($white,5%)
+	margin-top: 20px
+	padding-top: 20px
+	max-width: 80%
+	+media-breakpoint-down(md)
+		max-width: 100%
+	.sort
+		@extend .form-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+		max-width: 300px
+		label
+			width: auto
+			padding-right: 10px
+		select
+			flex: 1
+	.comment-items
+		.item
+			+flexbox
+			padding: 15px 0
+			.user
+				width: 70px
+				text-align: center
+				.img
+					width: 70px
+					height: 70px
+					margin-bottom: 10px
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+				.name
+					+fs(16rem)
+					line-height: 1
+					font-weight: 700
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+				time
+					+fs(11rem)
+					color: darken($white,50%)
+			.caption
+				flex: 1
+				padding-left: 20px
+				.rating
+					margin-bottom: 5px
+					ul
+						+flexbox
+						align-items: center
+						align-content: center
+						li
+							+fs(13rem)
+							color: darken($white,20%)
+							+ li
+								margin-left: 5px
+							&.active
+								color: $amber
+				.title
+					+fs(16rem)
+					font-weight: 700
+					margin-bottom: 5px
+				.des
+					+fs(13rem)
+					margin-bottom: 5px
+				.sharelink
+					+fs(13rem)
+					color: $amber
+

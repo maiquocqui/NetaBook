@@ -1,0 +1,64 @@
+.nav-tabs
+	margin: 0
+	padding: 0
+	border-bottom: 1px solid darken($white,5%)
+	display: block
+	// white-space: nowrap
+	// overflow: auto
+	.nav-item
+		display: inline-block
+		margin-bottom: -1px
+		+media-breakpoint-down(md)
+			margin-bottom: 0
+		+ .nav-item
+			margin-left: 50px
+		.nav-link
+			border: none
+			border-bottom: 2px solid transparent
+			+fs(14rem)
+			line-height: 20px
+			padding: 10px 0
+			text-transform: uppercase
+			color: darken($white,40%)
+			&:hover
+				color: $orange
+			&.active
+				color: $main
+				border-bottom-color: $orange
+
+
+.nav-tabs2
+	+media-breakpoint-down(md)
+		overflow: auto
+		white-space: nowrap
+	+media-breakpoint-down(sm)
+		border: none
+	.nav-item
+		+media-breakpoint-down(sm)
+			display: inline-block
+		+ .nav-item
+			margin-left: 10px
+		.nav-link
+			text-transform: uppercase
+			+bor-rad(0)
+			padding: 10px 20px
+			line-height: 20px
+			margin-bottom: -1px
+			+media-breakpoint-down(md)
+				margin-bottom: 0
+			+media-breakpoint-down(sm)
+				padding: 8px 20px
+				+bor-rad(5px)
+				color: $main
+				border: 1px solid darken($white,10%)
+			&.active
+				border: 1px solid darken($white,5%)
+				border-top: 3px solid $orange
+				background: $white
+				border-bottom-color: $white
+				+media-breakpoint-down(sm)
+					border: 1px solid $orange
+					background: $orange
+					color: $white
+					margin: 0
+					font-weight: 500

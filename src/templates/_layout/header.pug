@@ -1,0 +1,255 @@
+header
+	//- .header-top
+		.container
+			.header-wrap.justify-content-between
+				.hotline
+					i.md phone_iphone
+					span Hotline  
+						a(href="tel:") 028.7301.9777 
+						|- 
+						a(href="tel:") 028.7301.6777
+				.col-right
+					.login
+						ul
+							li
+								a(href="#!") 
+									i.md edit
+									span Đăng ký
+							li
+								a(href="#!") 
+									i.md person
+									span Đăng nhập
+	.header-main
+		.container
+			.header-wrap.justify-content-between
+				.sitelogo
+					a(href="#!")
+						img(src="img/logo.png", alt="")
+				.search
+					.searchbox
+						input(type="text" placeholder="Bạn tìm sách gì?")
+						select
+							option Tất cả
+						button.searchbutton
+							i.md search
+							//- span Tìm kiếm
+				.col-right
+					.search-toggle <i class="fal fa-search"></i>
+					.login-tool
+						.dropdown.dropdown-custom
+							li.firstnav
+								a(href='#!') Xin chào: Admin
+							li.logout
+								a(href='#!') Thoát
+					//- .login-tool
+						.dropdown.dropdown-custom
+							a.dropdown-toggle(href='#', data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 
+								.login-icon
+									i.fal.fa-user
+								span Đăng nhập
+							.dropdown-menu.dropdown-menu-center(aria-labelledby='dropdownMenuLink')
+								.login
+									ul
+										li
+											a(href='#!' data-toggle="modal" data-target="#loginModal") Đăng ký
+										li
+											a(href='#!' data-toggle="modal" data-target="#loginModal") Đăng nhập
+								.social-login
+									ul
+										li
+											a.facebook(href="#!") <i class="fab fa-facebook-f"></i>
+												span Đăng nhập bằng Facebook
+										li
+											a.google(href="#!") <i class="fab fa-google-plus-g"></i>
+												span Đăng nhập bằng Google
+										//- li
+										//- 	a.zalo(href="#!") <i class="fa fa-google-plus" aria-hidden="true"></i>
+										//- 		span Đăng nhập bằng Google
+					.cart
+						a.cart-toggle(href="#!")
+							.cart-icon
+								i.fal.fa-shopping-cart
+								.cart-amount 1
+							span Giỏ hàng
+						.cart-panel
+							.cart-list
+								.item
+									a.img(href="#!")
+										img(src="img/pr1.png", alt="")
+									.caption
+										a.name Đắc nhân tâm - bí quyết để thành công
+										.price 1x 57.800đ
+										a.btn-remove(href="#!")
+											<i class="fal fa-trash-alt"></i>
+											span Xóa
+							.cart-total
+								strong.text-uppercase Tạm tính
+								strong(style='color: #f00') 57.800đ
+							.checkout-btn
+								a.btn-gotocart(href="#!") Giỏ hàng
+								a.btn-pay(href="#!") Thanh toán
+	.header-menu
+		.container
+			.header-wrap
+				.sidebar-menu
+					.btn-sidebar
+						i.md menu
+						span Tất cả danh mục
+					.overlay
+					.main-menu
+						.btn-closemenu Tất cả danh mục <i class="fal fa-times"></i>
+						.menu-wrap
+							ul.menu-link
+								li.has-sub
+									a(href="#!") Kinh tế
+										span (4932)
+									.btn-showsub <i class="fal fa-chevron-down"></i>
+									.mega-sub
+										a.title(href="#!") Sách kinh tế
+										ul.mega-row
+											li.mega-col
+												ul
+													li
+														a(href="#!") Sách Marketing - Bán hàng
+													li
+														a(href="#!") Nhân vật - Bài học kinh doanh
+													li
+														a(href="#!") Sách Khởi nghiệp
+													li
+														a(href="#!") Sách Quản trị, Lãnh đạo
+													li
+														a(href="#!") Sách Quản trị, Lãnh đạo
+											li.mega-col
+												ul
+													li
+														a(href="#!") Sách Kinh tế học
+													li
+														a(href="#!") Sách Quản trị Nhân sự
+													li
+														a(href="#!") Sách Khởi nghiệp
+													li
+														a(href="#!") Sách Chứng khoán - Bất động sản - Đầu tư
+													li
+														a(href="#!") Sách Kỹ năng làm việc
+								li
+									a(href="#!") Nghệ thuật sống - Tâm lý 
+										span (667)
+								li
+									a(href="#!") Văn Học Việt Nam 
+										span (86)
+								li
+									a(href="#!") Văn học nước ngoài 
+										span (367)
+								li
+									a(href="#!") Thiếu nhi 
+										span (97)
+								li
+									a(href="#!") Giáo dục - Gia đình 
+										span (142)
+								li
+									a(href="#!") Văn hóa - Nghệ thuật 
+										span (68)
+								li
+									a(href="#!") Lịch Sử 
+										span (93)
+								li
+									a(href="#!") Khoa Học - Triết học
+										span (92)
+								li
+									a(href="#!") Tâm linh - Tôn giáo 
+										span (348)
+								li
+									a(href="#!") Sách Y học - Thực dưỡng 
+										span (140)
+								//- li
+									a(href="#!") Ngoại ngữ - Từ điển 
+										span (57)
+				.h-menu
+					.btn-menumore
+						i.md more_horiz
+					.h-menu-wrap
+						ul.menu-link
+							li
+								a(href="#!") Tủ sách khai tâm
+							li.has-sub
+								a(href="#!") Hỗ trợ khách hàng
+								.sub
+									ul
+										li
+											a(href="#!") sub 1
+							li.has-sub
+								a(href="#!") Chăm sóc khách hàng
+								.sub
+									ul
+										li
+											a(href="#!") Sen búp xin tặng bạn
+										li
+											a(href="#!") Bao đọc sách hay
+										li
+											a(href="#!") Yêu cầu đặt sách
+										li
+											a(href="#!") Tư vấn dịch vụ
+							li
+								a(href="#!") Về khai tâm
+							li
+								a(href="#!") Chia sẽ sách hay
+							li
+								a(href="#!") Điểm sách
+
+#loginModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+	.modal-dialog.modal-login(role='document')
+		.modal-content
+			.modal-header
+				ul#myTab.nav.nav-tabs.login-tabs(role='tablist')
+					li.nav-item
+						a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') Đăng nhập
+					li.nav-item
+						a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') Đăng ký
+				.close(data-dismiss='modal', aria-label='Close') <i class="fal fa-times"></i>
+			.modal-body
+				#myTabContent.tab-content
+					#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+						.login-form
+							.form-wrap
+								.form-group
+									label
+									input(type="text" placeholder="Nhập email hoặc số điện thoại")
+								.form-group
+									label
+									input(type="text" placeholder="Nhập mật khẩu")
+								a.forget.text-orange(href="#!") Quên mật khẩu
+								input(type="submit", value="ĐĂNG NHẬP ĐỂ MUA HÀNG MUA HÀNG")
+							.social-login
+								label Hoặc đăng nhập bằng
+								ul
+									li
+										a.facebook(href="#!") <i class="fab fa-facebook-f"></i>
+											span Facebook
+									li
+										a.google(href="#!") <i class="fab fa-google-plus-g"></i>
+											span Google
+					#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+						.login-form
+							.form-wrap
+								.form-group.validatecode
+									label
+									input(type="text" placeholder="Nhập email hoặc số điện thoại")
+									button.btn-resendcode Gửi mã xác nhận
+								.form-group
+									label
+									input(type="text" placeholder="Nhập email hoặc số điện thoại")
+								.form-group
+									label
+									input(type="text" placeholder="Nhập mã xác nhận gửi tới số điện thoại trên")
+								.form-group
+									label
+									input(type="text" placeholder="Nhập email")
+								.form-group
+									label
+									input(type="text" placeholder="Mật khẩu từ 6-32 ký tự")
+								.form-group
+									label
+									input(type="text" placeholder="Nhập họ tên")
+								.form-des Khi bạn nhấn đăng ký, bạn đã đồng ý 
+									a.text-orange(href="#!") điều kiện sử dụng và chính sách của NETA
+								input(type="submit", value="ĐĂNG KÝ")

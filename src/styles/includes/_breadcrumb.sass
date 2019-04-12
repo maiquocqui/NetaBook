@@ -1,0 +1,25 @@
+.breadcrumb-section
+	ol.breadcrumb
+		margin: 0
+		padding: 0
+		background: none
+		+flexbox
+		align-items: center
+		align-content: center
+		flex-wrap: wrap
+		min-height: 40px
+		li
+			color: darken($white,60%)
+			&:after
+				content: '\f105'
+				margin: 0px 10px
+			a
+				+fs(12rem)
+				color: darken($white,60%)
+				&:hover
+					color: $orange
+			&:last-child
+				&:after
+					display: none
+				a
+					color: $orange

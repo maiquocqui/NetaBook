@@ -1,0 +1,558 @@
+.product-detail-page
+	.category-page
+		margin-bottom: 20px
+		+media-breakpoint-down(sm)
+			margin: 0px -15px 15px
+.product-detail
+	padding: 20px
+	+media-breakpoint-down(sm)
+		padding: 15px
+	.product-slide-wrap
+		+flexbox
+		flex-wrap: wrap
+		.slide-main
+			width: 100%
+			height: 420px
+			margin-bottom: 20px
+			+media-breakpoint-down(sm)
+				height: 270px
+			.item
+				.img
+					display: block
+					text-align: center
+					// border: 1px solid darken($white,10%)
+					img
+						height: 420px
+						display: initial
+						+media-breakpoint-down(sm)
+							height: 270px
+		.slide-nav
+			width: 80%
+			.slick-slide
+				padding: 0px 10px
+				+media-breakpoint-down(sm)
+					padding: 0px 5px
+			.item
+				cursor: pointer
+				.img
+					// width: 70px
+					height: 70px
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: center
+					border: 1px solid darken($white,5%)
+					+media-breakpoint-down(sm)
+						height: 50px
+					img
+						max-height: 100%
+						height: 100%
+			.slick-current
+				.item
+					.img
+						border-color: $orange
+		.btn-openbook
+			display: block
+			width: 20%
+			padding: 0px 10px
+			+media-breakpoint-down(sm)
+				padding: 0px 5px
+				img
+					height: 50px
+	.product-intro
+		+media-breakpoint-down(sm)
+			margin-top: 10px
+		.product-name
+			+fs(24rem)
+			+media-breakpoint-down(sm)
+				+fs(18rem)
+				font-weight: 500
+		.rating
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(14rem)
+			padding-bottom: 10px
+			border-bottom: 1px solid darken($white,5%)
+			margin-bottom: 15px
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				margin-right: 10px
+				li
+					color: darken($white,20%)
+					+ li
+						margin-left: 3px
+					&.active
+						.fa
+							color: $amber
+		.product-price
+			padding-bottom: 15px
+			border-bottom: 1px dashed darken($white,10%)
+			margin-top: -5px
+			ul
+				li
+					+flexbox
+					align-items: flex-end
+					align-content: flex-end
+					+fs(13rem)
+					height: 1.7rem
+					+media-breakpoint-down(sm)
+						height: 1.5rem
+					span
+						margin-left: 10px
+				.price-old
+					color: darken($white,40%)
+					text-decoration: line-through
+				.price-new
+					+fs(28rem)
+					font-weight: 700
+					color: #FF0000
+					line-height: 1
+					+media-breakpoint-down(sm)
+						+fs(18rem)
+			.promotion
+				display: inline-block
+				vertical-align: middle
+				margin-left: 20px
+				+fs(11rem)
+				font-weight: 700
+				background: $orange
+				color: $white
+				line-height: 16px
+				padding: 0px 3px
+				+bor-rad(0 4px 4px 0)
+				+pos(rel,null)
+				&:before
+					content: ''
+					display: block
+					border: 8px solid transparent
+					border-left: none
+					border-right-color: $orange
+					+pos(abs, 0 null null -8px)
+		.product-gift
+			padding: 15px
+			+bor-rad(5px)
+			+fs(13rem)
+			color: darken($white,60%)
+			border: 1px solid $orange
+			background: color-rgba($orange,0.1)
+			strong
+				color: $main
+			ul
+				li
+					+pos(rel,null)
+					padding-left: 15px
+					margin-bottom: 5px
+					&:before
+						content: '\f111'
+						font-family: "Font Awesome 5 Pro"
+						font-weight: 700
+						+pos(abs, 6px null null 0)
+						+fs(6rem)
+						color: $orange
+		.product-btn
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			padding: 15px 0
+			.warning
+				font-weight: bold
+				+fs(13rem)
+				color: #f00
+				margin-bottom: 5px
+				width: 100%
+			label
+				// width: 100%
+				font-weight: 700
+				color: $main
+				+fs(13rem)
+				margin-right: 10px
+				// margin-bottom: 10px
+			.input-number
+				width: 100px
+				justify-content: space-between
+				height: 40px
+				align-items: center
+				align-content: center
+				border: 1px solid darken($white,5%)
+				.btn-spin
+					+fs(16rem)
+					width: 30px
+					text-align: center
+					color: darken($white,40%)
+					&:hover
+						color: $green
+			.btn-buy
+				@extend .button-primary
+				margin-top: 10px
+				width: 100%
+				text-transform: uppercase
+				+fs(14rem)
+				+media-breakpoint-down(sm)
+					width: auto
+					flex: 1
+					margin-top: 0
+					margin-left: 10px
+				// &:before
+				// 	content: '\f07a'
+				// 	margin-right: 5px
+				// 	font-weight: normal
+			.input-email
+				flex: 1
+				input
+					width: 100%
+					+fs(13rem)
+					line-height: 38px
+					border: 1px solid darken($white,5%)
+					padding: 0px 15px
+			.btn-notify
+				@extend .button-primary
+				margin-left: 10px
+				text-transform: uppercase
+				+fs(14rem)
+				padding: 0 15px
+				min-width: unset
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+					font-weight: normal
+					text-transform: none
+			.des
+				+fs(13rem)
+				display: block
+				width: 100%
+				margin-top: 10px
+				&:hover
+					color: $orange
+		.share
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(14rem)
+			a
+				margin-left: 15px
+				+fs(18rem)
+		.book-info
+			border: 1px solid darken($white,5%)
+			+bor-rad(4px)
+			padding: 15px
+			margin-bottom: 15px
+			.table-product-detail
+				border: none
+				colgroup
+					display: none
+				td
+					+fs(13rem)
+					padding: 0
+					border: none
+					width: 80px
+					+ td
+						padding-left: 15px
+						width: calc(100% - 80px)
+
+				.last
+					font-weight: 500
+			ul
+				li
+					margin-bottom: 7px
+					+fs(13rem)
+					&:last-child
+						margin-bottom: 0
+					a
+						color: $orange
+					strong
+						color: $main
+		.book-related
+			+bor-rad(4px)
+			overflow: hidden
+			border: 1px solid darken($white,10%)
+			.title
+				background: #EFEFEF
+				+fs(16rem)
+				text-transform: uppercase
+				line-height: 20px
+				padding: 10px 20px
+			.book-list
+				padding: 15px 0px 0px
+				.item
+			.product-item
+				border: none
+				+flexbox
+				flex-wrap: nowrap
+				align-items: flex-start
+				margin-bottom: 15px
+				padding: 0
+				.img
+					flex: 1
+					height: unset
+					img
+						height: 80px
+				.caption
+					flex: 2
+					padding-right: 15px
+					.rating
+						+fs(11rem)
+						color: darken($white,40%)
+						border: none
+						margin: 0
+						padding: 0
+						ul
+							li
+								.fa
+									+fs(13rem)
+.related-buy
+	margin-top: 20px
+	padding-top: 20px
+	border-top: 1px solid darken($white,10%)
+	+media-breakpoint-down(sm)
+		margin-bottom: 15px
+	.title
+		+fs(13rem)
+		text-transform: uppercase
+		margin-bottom: 15px
+		font-weight: 700
+	.pr-list
+		max-height: 195px
+		overflow: hidden
+		ul
+			li
+				margin-bottom: 10px
+				label
+					width: 100%
+					&:before, &:after
+						top: 50%
+						+transform(translateY(-50%))
+				.pr-buy
+					width: 100%
+					+flexbox
+					align-items: center
+					align-content: center
+				.img
+					width: 55px
+					height: 55px
+					+bor-rad(4px)
+					border: 2px solid darken($white,10%)
+					padding: 5px
+					text-align: center
+					img
+						height: 100%
+				.caption
+					padding-left: 10px
+					flex: 1
+					+flexbox
+					align-items: center
+					align-content: center
+					justify-content: space-between
+				.name
+					+fs(13rem)
+				.price
+					flex: 1
+					text-align: right
+					font-weight: 700
+	.btn-showall
+		background: $white
+		display: block
+		text-align: center
+		color: $orange
+		+fs(13rem)
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			height: 100px
+			+pos(abs, null 0 100% 0)
+			background: linear-gradient(to bottom, color-rgba($white,0),$white)
+		&:hover
+			text-decoration: underline
+	.total
+		padding: 10px 0
+		text-align: right
+		+fs(13rem)
+		strong
+			color: $red
+	.btn-addmore
+		@extend .button-primary
+		font-weight: normal
+		line-height: 36px
+.product-description
+	padding: 0px 20px
+	width: 76%
+	+media-breakpoint-down(lg)
+		width: 100%
+	+media-breakpoint-down(sm)
+		padding: 0px 15px
+	.nav-tabs
+		+media-breakpoint-down(sm)
+			margin: 0px -15px
+			padding: 0px 15px
+	.tab-pane
+		padding: 20px
+		+media-breakpoint-down(sm)
+			padding: 15px 0
+	.comment
+		+flexbox
+		justify-content: center
+		overflow: hidden
+	.pages
+		ul.pagination
+			justify-content: center
+	.btn-viewmore
+		padding: 20px 0
+		background: $white
+		text-align: center
+		display: block
+		+pos(rel,null)
+		&:before
+			content: ''
+			display: block
+			+pos(abs, null 0 100% 0)
+			height: 100px
+			background: linear-gradient(to bottom, color-rgba($white,0), $white)
+			z-index: 5
+		span
+			@extend .button-secondary
+			font-weight: normal
+			+media-breakpoint-up(lg)
+				min-width: 310px
+	.content-product
+		border-top: 1px solid darken($white,5%)
+		padding: 20px 0
+		+flexbox
+		.img
+			width: 140px
+			height: 140px
+			text-align: center
+			+media-breakpoint-down(sm)
+				width: 100px
+				height: 100px
+			img
+				height: 100%
+		.caption
+			flex: 1
+			+pos(rel,null)
+			+flexbox
+			flex-direction: column
+			justify-content: center
+			.name
+				font-weight: 500
+				+fs(18rem)
+			.price
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+				ul
+					li
+						+flexbox
+						align-items: flex-end
+						align-content: flex-end
+						+fs(13rem)
+						height: 1.7rem
+						+media-breakpoint-down(sm)
+							height: auto
+						span
+							margin-left: 10px
+					.price-old
+						color: darken($white,40%)
+					.price-new
+						+fs(28rem)
+						font-weight: 700
+						color: #FF0000
+						line-height: 1
+						+media-breakpoint-down(sm)
+							+fs(16rem)
+				.promotion
+					display: inline-block
+					vertical-align: middle
+					margin-left: 20px
+					+fs(11rem)
+					font-weight: 700
+					background: $orange
+					color: $white
+					line-height: 16px
+					padding: 0px 3px
+					+bor-rad(0 4px 4px 0)
+					+pos(rel,null)
+					&:before
+						content: ''
+						display: block
+						border: 8px solid transparent
+						border-left: none
+						border-right-color: $orange
+						+pos(abs, 0 null null -8px)
+			.btn-wrap
+				+flexbox
+				align-items: center
+				align-content: center
+				+pos(abs, 50% 0 null null)
+				+transform(translateY(-50%))
+				+media-breakpoint-down(md)
+					+pos(static,null)
+					flex-wrap: wrap
+					+transform(translateY(0))
+				label
+					white-space: nowrap
+					+fs(13rem)
+					font-weight: 500
+				.input-number
+					width: 100px
+					justify-content: space-between
+					height: 40px
+					align-items: center
+					align-content: center
+					border: 1px solid darken($white,5%)
+					margin-left: 10px
+					.btn-spin
+						+fs(16rem)
+						width: 30px
+						text-align: center
+						color: darken($white,40%)
+						&:hover
+							color: $green
+				.btn-buy
+					@extend .button-primary
+					width: 100%
+					min-width: unset
+					padding: 0px 20px
+					text-transform: uppercase
+					+fs(14rem)
+					margin-left: 10px
+					+media-breakpoint-up(lg)
+						min-width: 250px
+					+media-breakpoint-down(md)
+						margin-left: 0
+						margin-top: 10px
+					+media-breakpoint-down(sm)
+						margin-left: 0
+						margin-top: 10px
+			.warning
+				font-weight: bold
+				+fs(13rem)
+				color: #f00
+				margin-bottom: 5px
+				+media-breakpoint-down(sm)
+					width: 100%
+			.input-email
+				flex: 1
+				input
+					width: 100%
+					+fs(13rem)
+					line-height: 38px
+					border: 1px solid darken($white,5%)
+					padding: 0px 15px
+			.btn-notify
+				@extend .button-primary
+				margin-left: 10px
+				text-transform: uppercase
+				+fs(14rem)
+				padding: 0 15px
+				min-width: unset
+				+media-breakpoint-down(sm)
+					margin-left: 0
+					margin-top: 10px
+					+fs(13rem)
+					padding: 0px 10px
+					text-align: center
+					display: block
+					width: 100%
+.same-author
+	margin-top: -30px

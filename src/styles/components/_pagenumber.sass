@@ -1,0 +1,38 @@
+
+.pages
+	padding: 20px 0
+	ul.pagination
+		+flexbox
+		li
+			+ li
+				margin-left: 10px
+			a, span
+				width: 32px
+				height: 32px
+				+flexbox
+				justify-content: center
+				align-items: center
+				color: darken($white,40%)
+				+fs(14rem)
+				font-weight: 500
+				border: 1px solid darken($white,10%)
+				+bor-rad(4px)
+			// &.prev
+			// 	a
+			// 		+fs(18rem)
+			// 		&:before
+			// 			content: '\f104'
+			// &.next
+			// 	a
+			// 		+fs(18rem)
+			// 		&:before
+			// 			content: '\f105'
+			&:hover
+				a, span
+					color: $orange
+			&.active
+				a, span
+					font-weight: 700
+					background: $orange
+					border-color: $orange
+					color: $white

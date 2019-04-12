@@ -1,0 +1,76 @@
+.container
+	section.cart-page
+		.cart-progress
+			ul
+				li.active
+					.number 1
+					label Đăng nhập
+				li.active
+					.number 2
+					label Địa chỉ giao hàng
+				li
+					.number 3
+					label Than toán / Đặt mua
+		.row
+			.col-12.col-lg-9
+				.cart-step.s4
+					.small-title
+						span KHÁCH HÀNG MỚI / ĐĂNG NHẬP
+					.cart-login
+						.form-wrap
+							.form-group
+								label Email của bạn:
+								input(type="text" placeholder="Nhập vào email")
+							.login-choice
+								ul
+									li.radio
+										input#rd1(type="radio", name="rd")
+										label(for="rd1") Đặt hàng mà không cần đăng ký
+											.des (Sách Khai Tâm khuyến khích đăng ký thành viên để được tích lũy 
+												span.text-green Sen búp
+												|, và mua hàng nhanh hơn cho những lần sau)
+									li.radio
+										input#rd2(type="radio", name="rd")
+										label(for="rd2") Đặt hàng mà không cần đăng ký
+							.form-group
+								label Mật khẩu:
+								input(type="text" placeholder="Nhập vào mật khẩu")
+								a.forget-pw(href="#!") Quên mật khẩu
+							.btn-wrap
+								a.btn-login(href="#!") TIẾP TỤC
+			.col-12.col-lg-3
+				.cart-step.s2
+					.cart-title-info Thông tin đơn hàng
+						a.btn-edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					.cart-product
+						.title Bạn có 1 sản phẩm trong giỏ hàng
+						.item
+							a.img(href="#!")
+								img(src="img/pr2.png", alt="")
+							.caption
+								a.name(href="#!") Đắc Nhân Tâm - Bí quyết để thành công
+								.amount Số lượng: 1
+							.price 57.800đ
+					.cart-overview
+						ul
+							li
+								label(for="") 
+									strong Tổng giỏ hàng
+								.value 57.800đ
+							li
+								label(for="") Phí vận chuyển
+								.value 0đ
+							li
+								label(for="") Phí Bưu điện phụ thu 
+								.value Chưa có
+							li
+								label(for="") Dịch vụ cộng thêm
+								.value Chưa có
+					.cart-total
+						label Thành tiền
+						.value
+							strong 57.800đ
+							span (Đã bao gồm VAT)
+					.cart-des Bạn sẽ được tặng 3 
+						span.text-green Búp sen 
+						|sau khi hoàn tất thanh toán đơn hàng này

@@ -1,0 +1,122 @@
+.modal
+	.modal-login
+		max-width: 410px
+		margin: 110px auto
+		.modal-header
+			padding: 0
+			+pos(rel,null)
+			.close
+				width: 30px
+				height: 30px
+				+bor-rad(50px)
+				color: darken($white,60%)
+				background: $white
+				box-shadow: 0px 4px 6px color-rgba($black,0.2)
+				opacity: 1
+				line-height: 1
+				padding: 0
+				+flexbox
+				align-items: center
+				justify-content: center
+				top: -15px
+				right: -15px
+				&:hover
+					color: $orange
+				.fal
+					+fs(18rem)
+		.modal-body
+			padding: 20px
+
+
+.login-tabs
+	padding: 0px 20px
+	border-bottom: 1px solid darken($white,5%)
+	width: 100%
+	+flexbox
+	.nav-item
+		flex: 1
+		.nav-link
+			font-weight: 500
+			+fs(18rem)
+			line-height: 20px
+			padding: 15px 20px
+			text-align: center
+			&.active
+				border-bottom-color: $orange
+.login-form
+	.form-wrap
+		.form-group
+			label
+				display: none
+		.forget
+			+fs(13rem)
+		input[type="submit"]
+			@extend .button-primary
+			margin-top: 10px
+			line-height: 40px
+			padding: 0
+			border: none
+		.validatecode
+			input
+				padding-right: 140px
+			.btn-resendcode
+				@extend .button-primary
+				+fs(13rem)
+				text-transform: none
+				font-weight: normal
+				line-height: 37px
+				min-width: unset
+				padding: 0px 20px
+				+pos(abs, 0 0 null null)
+	.social-login
+		border-top: 1px solid darken($white,5%)
+		margin-top: 20px
+		text-align: center
+		label
+			display: inline-block
+			+fs(13rem)
+			background: $white
+			padding: 0px 10px
+			+transform(translateY(-12px))
+		ul
+			+flexbox
+			width: 100%
+			li
+				width: calc((100% - 20px) / 2)
+				+ li
+					margin-left: 20px
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			line-height: 40px
+			color: $white 
+			background: $orange
+			+bor-rad(4px)
+			+fs(13rem)
+			.fab
+				width: 40px
+				height: 40px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+fs(16rem)
+				border-right: 1px solid color-rgba($black,0.1)
+			span
+				flex: 1
+				// padding-left: 15px
+			&:hover
+				box-shadow: 0px 10px 20px -10px $orange
+			&.facebook
+				background: $facebook
+				&:hover
+					box-shadow: 0px 10px 20px -10px $facebook
+			&.google
+				background: $google
+				&:hover
+					box-shadow: 0px 10px 20px -10px $google
+	.alert
+		display: block
+		+fs(14rem)

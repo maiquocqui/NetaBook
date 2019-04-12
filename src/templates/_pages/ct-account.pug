@@ -1,0 +1,59 @@
+.container
+	section.account-page
+		ul#myTab.nav.nav-tabs.nav-tabs2(role='tablist')
+				li.nav-item
+					a.nav-link.active(href="#!") THÔNG TIN TÀI KHOẢN
+				li.nav-item
+					a.nav-link(href="#!") ĐƠN HÀNG CỦA TÔI
+				li.nav-item
+					a.nav-link(href="#!") QUẢN LÝ ĐIỂM THƯỞNG
+		.account-info
+			.module-title Tài khoản đăng nhập bằng Facebook
+			.account-form
+				.form-wrap
+					.form-group
+						label(for="") Họ tên
+						input(type="text")
+					.form-group.phone
+						label(for="") Số điện thoại
+						input(type="text")
+						button.btn-sendcode Gửi mã xác nhận
+					.form-group
+						label(for="") Mã xác nhận
+						input(type="text")
+					.form-group
+						label(for="") Email
+						input(type="text" disabled)
+					.form-group
+						label(for="") &nbsp;
+						.checkbox
+							input#cb1(type="checkbox", name="cb")
+							label(for="cb1") Thay đổi mật khẩu
+					.form-group
+						label(for="") Mật khẩu cũ
+						input(type="text")
+					.form-group
+						label(for="") Mật khẩu mới
+						input(type="text")
+					.form-group
+						label(for="") Nhập lại
+						input(type="text")
+					.form-group
+						label(for="") &nbsp;
+						input(type="submit" value="Cập nhật")
+			.connect-account
+				label LIÊN KẾT TÀI KHOẢN MẠNG XÃ HỘI
+				.connect-list
+					.item
+						.icon
+							<i class="fab fa-facebook-f"></i>
+						.caption
+							.name Facebook <i class="fas fa-check-circle text-success"></i>
+							span.status Đã liên kết
+					.item
+						.icon
+							<i class="fab fa-google-plus-g"></i>
+						.caption
+							.name Google
+							a.status(href="#!") Liên kết
+
